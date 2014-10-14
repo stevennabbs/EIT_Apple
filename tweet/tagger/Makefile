@@ -1,4 +1,4 @@
-CFLAGS =-std=c99 -W -Wall -Wextra -O3
+CFLAGS =-std=c99 -D_POSIX_C_SOURCE=200809L -W -Wall -Wextra -O3
 LIBS   =
 
 DESTDIR=

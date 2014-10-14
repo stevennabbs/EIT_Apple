@@ -85,7 +85,7 @@ void pfatal(const char *msg, ...) {
  *   fuck we have to redefine this function ? Some systems still doesn't provide
  *   it...
  */
-static
+/*static*/
 char *strndup(const char *s, size_t n) {
 	size_t l = 0;
 	while (l < n && s[l] != '\0')
