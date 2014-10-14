@@ -5,8 +5,8 @@ Created on 13 oct. 2014
 '''
 import re
 
-chemin = "/home/romain/Documents/EIT/Etiquetté/"
-fichier = "corpusEtq.003"
+chemin = "../tweet/annote/"
+fichier = "erwan/corpusEtq.005"
 fichier2 = "steven/3_suite.txt"
 
 file = open(chemin + fichier, mode='r')
