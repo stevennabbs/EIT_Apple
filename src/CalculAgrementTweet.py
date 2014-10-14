@@ -9,8 +9,6 @@ from sys import argv
 
 s , fichier1, fichier2 = argv
 print('%s, %s, %s' % (s, fichier1, fichier2))
-fichier1 = "/home/romain/Documents/EIT/Etiquetté/corpusEtq.003"
-fichier2 = "/home/romain/Documents/EIT/Etiquetté/steven/3_suite.txt"
 
 try:
     file = open(fichier1, mode='r')
@@ -26,7 +24,6 @@ corpus1 = {}
 corpus2 = {}
 for l in lines:
     m = re.search('(\d+),([^,]+)', l)
-    print (m.group(1) + " " + m.group(2))
     id, lbl = m.group(1), m.group(2)
     corpus1[id] = lbl
 
