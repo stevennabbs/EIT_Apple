@@ -4,21 +4,26 @@ Created on 13 oct. 2014
 @author: romain
 '''
 import re
+from sys import argv
 
-chemin = "../tweet/annote/"
-fichier = "erwan/corpusEtq.005"
-fichier2 = "steven/3_suite.txt"
 
-file = open(chemin + fichier, mode='r')
-file2 = open(chemin + fichier2, mode='r')
+s , fichier1, fichier2 = argv
+print('%s, %s, %s' % (s, fichier1, fichier2))
 
+try:
+    file = open(fichier1, mode='r')
+    file2 = open(fichier2, mode='r')
+except:
+    print("Erreur sur l'ouverture des fichiers")
+    exit
+    
+    
 lines = file.readlines()
 
 corpus1 = {}
 corpus2 = {}
 for l in lines:
     m = re.search('(\d+),([^,]+)', l)
-    print (m.group(1) + " " + m.group(2))
     id, lbl = m.group(1), m.group(2)
     corpus1[id] = lbl
 
@@ -27,6 +32,9 @@ for l in lines:
     m = re.search('(\d+),([^,]+)', l)
     id, lbl = m.group(1), m.group(2)
     corpus2[id] = lbl
+
+file.close()
+file2.close()
     
 mat = {'pos':{'pos':0, 'neu':0, 'neg':0, 'irr':0},
      'neu': {'pos':0, 'neu':0, 'neg':0, 'irr':0},
@@ -69,7 +77,7 @@ pe /= (cnt * cnt)
 kappa = (p0 - pe) / (1-pe)
 print("agrément : %f" %  kappa)
 
-file.close()
+
 
 def calculAgrement():
     return 0

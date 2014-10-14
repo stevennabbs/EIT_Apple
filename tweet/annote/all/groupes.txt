@@ -1,0 +1,32 @@
+Groupe 0:
+	SOURDIN Malo malo@sourdin.fr
+	LAREDO Thaïs thais.laredo@u-psud.fr
+	ROUX Valentin valentin.roux@u-psud.fr
+	BEUQUE Romain romain.beuque@u-psud.fr
+
+	Set: 1 2 3 5 6 7 9 10 11
+
+Groupe 1:
+	MICHARD Clement clement.michard@u-psud.fr
+	ELMALEK Florian florian.elmalek@u-psud.fr
+	DELLOUVE Léo leo.dellouve@gmail.com
+	GAUTHIEZ Alexis alexis.gauthiez@u-psud.fr
+
+	Set: 1 2 4 5 6 8 9 10 12
+
+Groupe 2:
+	MONNET Guillaume mnnt.guillaume@gmail.com
+	JAYEZ Romain rjayez.upsud@gmail.com
+	CHAUSSY Erwan erwan.chaussy@u-psud.fr
+	NABBS Steven steven.nabbs@gmail.com
+
+	Set: 1 3 4 5 7 8 9 11 12
+
+Groupe 3:
+	ZHANG Handa louiszhang@hotmail.fr
+	OUBRIK Brahim brahim.oubrik@gmail.com
+	PONCET Luc poncetluc@gmail.com
+	BOSOM Jeremie jeremie.bosom@u-psud.fr
+
+	Set: 2 3 4 6 7 8 10 11 12
+
