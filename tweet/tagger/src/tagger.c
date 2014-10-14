@@ -26,7 +26,6 @@
  */
 #define _XOPEN_SOURCE
 #define _POSIX_SOURCE
-#define _POSIX_C_SOURCE 200809L
 
 #include <ctype.h>
 #include <errno.h>
@@ -81,9 +80,10 @@ void pfatal(const char *msg, ...) {
 	exit(EXIT_FAILURE);
 }
 
-#if 0
 /* strndup:
- *   Duplicate the string [s] taking at most [n] characters from it.
+ *   Duplicate the string [s] taking at most [n] characters from it. What the
+ *   fuck we have to redefine this function ? Some systems still doesn't provide
+ *   it...
  */
 static
 char *strndup(const char *s, size_t n) {
@@ -97,7 +97,6 @@ char *strndup(const char *s, size_t n) {
 	r[l] = '\0';
 	return r;
 }
-#endif
 
 /* decode:
  *   Decode and return the next UTF-8 encode unicode codepoint from the given
@@ -338,7 +337,7 @@ int main(int argc, char *argv[argc]) {
 		if (spl->lbl == NULL || len-- == 0 || *(str++) != ',')
 			fatal("invalid sample at line %d", nspl);
 		const char *cat = str;
-		while (len != 0 && (isalnum(*str) || *str == '?'))
+		while (len != 0 && *str != ')')
 			str++, len--;
 		spl->cat = strndup(cat, str - cat);
 		if (spl->cat == NULL || len-- == 0 || *(str++) != ')')

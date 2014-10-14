@@ -1,6 +1,9 @@
 # Tagger à compiler chez chacun
 tweet/tagger/tagger
 
+# Fichier temporaire
+*~
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
